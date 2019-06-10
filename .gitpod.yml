@@ -2,6 +2,3 @@
 image: 
     circleci:android
     
-tasks:
-   - command: npm install -g cordova qrcode ionic
-   
