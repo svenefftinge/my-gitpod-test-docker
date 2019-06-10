@@ -1,5 +1,5 @@
 image:
- pauljriley:android-sdk-resource
+    thyrlian:android-sdk
 
 ports:
   - port: 8001
