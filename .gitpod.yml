@@ -1,4 +1,5 @@
- image: mingc:android-build-box
+ image: 
+      thyrlian:android-sdk
     
     
     
