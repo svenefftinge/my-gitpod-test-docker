@@ -17,7 +17,7 @@ tasks:
               
               echo "Setting bash files to be runnable\n"          &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&  
               
-              npm install -g cordova &&
+              npm install -g cordova ionic qrcode &&
 
               
               echo "Starting Apache\n"                            &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&   
