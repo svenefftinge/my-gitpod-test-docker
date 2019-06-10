@@ -10,14 +10,14 @@ tasks:
            
              
              
-     command: echo "Start the .gitpod.yml installation\n"         &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  && 
+     command: echo "Start the .gitpod.yml installation"         &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt    && 
      
-              echo "Install Android SDK \n"                       &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&  
+              echo "Install Android SDK "                       &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt    &&  
               yes | sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28"                             &&     
               
-              echo "Setting bash files to be runnable\n"          &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&  
+              echo "Installing cordova ionic and qrcode"          &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&  
               
-              npm install -g cordova ionic qrcode &&
+              npm install -g cordova ionic qrcode                                                                       &&
 
               
               echo "Starting Apache\n"                            &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&   
