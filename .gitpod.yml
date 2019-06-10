@@ -1,28 +1,7 @@
-image:
-    thyrlian:android-sdk
-
-ports:
-  - port: 8001
-
+    
+image: 
+    circleci:android
+    
 tasks:
-  -  init: mkdir /workspace/my-gitpod-dockerfile-cordova/logs                                  &&
-           touch /workspace/my-gitpod-dockerfile-cordova/logs.txt 
-           
-             
-             
-     command: echo "Start the .gitpod.yml installation"         &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt    && 
-     
-              echo "Install Android SDK "                       &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt    &&  
-              yes | sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28"                             &&     
-              
-              echo "Installing cordova ionic and qrcode"          &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&  
-              
-              npm install -g cordova ionic qrcode                                                                       &&
-
-              
-              echo "Starting Apache\n"                            &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&   
-              apachectl start                                                                                           &&
-              gp await-port 8001                                                                                        && 
-              gp preview $(gp url 8001)                                                                                 &&
-              
-              echo "Last line in logs\n"                          &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  
+   - command: npm install -g cordova qrcode ionic
+   
